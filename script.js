@@ -1,3 +1,5 @@
-function showMessage() {
-    alert("You are special ❤️");
+function openStory() {
+
+    alert("✨ The story is about to begin...");
+
 }
