@@ -506,7 +506,7 @@ button:hover,
 
 }
 /* ================================= */
-/* FIFTH PAGE : THE LETTER */
+/* SCENE 5 : THE LETTER */
 /* ================================= */
 
 .letter-section {
@@ -519,17 +519,11 @@ button:hover,
 
     padding: 80px 20px;
 
+    position: relative;
+
     background:
-        radial-gradient(
-            circle at top right,
-            #4a2854,
-            transparent 45%
-        ),
-        radial-gradient(
-            circle at bottom left,
-            #302044,
-            transparent 45%
-        ),
+        radial-gradient(circle at top right, #4a2854, transparent 45%),
+        radial-gradient(circle at bottom left, #302044, transparent 45%),
         #100914;
 
     color: white;
@@ -537,7 +531,13 @@ button:hover,
 
 .letter-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     text-align: center;
 }
@@ -545,17 +545,19 @@ button:hover,
 .letter-container .small-title {
     display: block;
 
+    margin-bottom: 25px;
+
     color: #f3b6d2;
 
     font-size: 15px;
 
     letter-spacing: 2px;
-
-    margin-bottom: 25px;
 }
 
 .letter-card {
-    padding: 55px 55px;
+    width: 100%;
+
+    padding: 60px 55px;
 
     background:
         linear-gradient(
@@ -569,13 +571,12 @@ button:hover,
     border-radius: 30px;
 
     backdrop-filter: blur(15px);
-
     -webkit-backdrop-filter: blur(15px);
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,0.3);
+        0 25px 70px rgba(0,0,0,0.35);
 
-    animation: letterAppear 1s ease;
+    text-align: center;
 }
 
 .letter-top {
@@ -587,9 +588,13 @@ button:hover,
 }
 
 .letter-card h2 {
+    margin: 0 0 35px;
+
     font-size: clamp(30px, 5vw, 45px);
 
-    margin-bottom: 35px;
+    line-height: 1.25;
+
+    color: white;
 }
 
 .letter-card p {
@@ -601,7 +606,9 @@ button:hover,
 
     line-height: 1.9;
 
-    opacity: 0.78;
+    color: white;
+
+    opacity: 0.8;
 }
 
 .letter-divider {
@@ -615,7 +622,7 @@ button:hover,
 .letter-ending {
     font-style: italic;
 
-    color: #f5c6dc;
+    color: #f5c6dc !important;
 }
 
 .signature {
@@ -633,41 +640,30 @@ button:hover,
 }
 
 
-@keyframes letterAppear {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(30px)
-            scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
-
-}
-
-
-/* MOBILE */
+/* ================================= */
+/* SCENE 5 MOBILE */
+/* ================================= */
 
 @media (max-width: 600px) {
 
     .letter-section {
-        padding: 55px 15px;
+        padding: 60px 15px;
+    }
+
+    .letter-container {
+        width: 100%;
     }
 
     .letter-card {
+        width: 100%;
+
         padding: 40px 25px;
     }
 
     .letter-card p {
         font-size: 16px;
+
+        line-height: 1.8;
     }
 
 }
