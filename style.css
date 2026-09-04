@@ -333,3 +333,164 @@ button:hover {
         padding: 45px 25px;
     }
 }
+```css
+/* =========================
+   SCENE 4 - PHOTO GALLERY
+========================= */
+
+.photo-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #3d234d, transparent 45%),
+        radial-gradient(circle at 80% 80%, #241936, transparent 45%),
+        #0d0712;
+
+    color: white;
+}
+
+.photo-container {
+    width: min(1050px, 95%);
+
+    text-align: center;
+}
+
+.photo-container .small-title {
+    display: inline-block;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: #f3b6d2;
+
+    margin-bottom: 10px;
+}
+
+.photo-container h2 {
+    font-size: clamp(30px, 5vw, 48px);
+
+    line-height: 1.3;
+
+    margin: 15px 0 45px;
+}
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+.photo-card {
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.photo-card.featured {
+    transform: translateY(-15px);
+
+    border-color: rgba(255, 182, 210, 0.45);
+}
+
+.photo-card.featured:hover {
+    transform: translateY(-25px);
+}
+
+.photo-placeholder {
+    height: 280px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(247, 168, 196, 0.18),
+            rgba(199, 125, 255, 0.18)
+        );
+}
+
+.photo-content {
+    padding: 22px 20px 25px;
+}
+
+.photo-content h3 {
+    margin: 0 0 10px;
+
+    font-size: 22px;
+}
+
+.photo-content p {
+    margin: 0;
+
+    line-height: 1.6;
+
+    opacity: 0.7;
+
+    font-size: 15px;
+}
+
+.photo-next {
+    margin-top: 50px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .photo-section {
+        padding: 55px 15px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card.featured {
+        transform: none;
+    }
+
+    .photo-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
+    .photo-placeholder {
+        height: 240px;
+    }
+
+}
+```
