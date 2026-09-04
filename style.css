@@ -295,3 +295,31 @@ button:hover {
     }
 
 }
+/* NEXT BUTTON FIX */
+
+.next-button {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+
+    margin-top: 40px;
+    padding: 14px 30px;
+
+    background: #ffffff;
+    color: #24152f;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
