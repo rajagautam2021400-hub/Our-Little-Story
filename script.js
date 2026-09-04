@@ -15,3 +15,12 @@ function goToNext() {
         behavior: "smooth"
     });
 }
+```javascript
+function goToFinal() {
+
+    document.getElementById("photo-gallery").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+```
