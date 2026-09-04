@@ -667,3 +667,172 @@ button:hover,
     }
 
 }
+/* ================================= */
+/* SCENE 6 : FINAL SURPRISE */
+/* ================================= */
+
+.final-section {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a2854,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at top left,
+            #302044,
+            transparent 40%
+        ),
+        #0d0712;
+
+    color: white;
+}
+
+.final-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final-heart {
+    font-size: 75px;
+
+    margin-bottom: 25px;
+
+    animation: heartBeat 1.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 20px rgba(255, 100, 150, 0.6));
+}
+
+.final-container .small-title {
+    color: #f3b6d2;
+
+    margin-bottom: 20px;
+}
+
+.final-container h2 {
+    max-width: 750px;
+
+    margin: 0 auto 30px;
+
+    font-size: clamp(34px, 6vw, 58px);
+
+    line-height: 1.2;
+}
+
+.final-message {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    opacity: 0.78;
+}
+
+.final-divider {
+    margin: 35px 0;
+
+    color: #f3b6d2;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+}
+
+.final-line {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    opacity: 0.7;
+}
+
+.final-container h3 {
+    font-size: clamp(25px, 5vw, 38px);
+
+    color: #f5c6dc;
+}
+
+.replay-button {
+    margin-top: 45px;
+
+    padding: 14px 32px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.replay-button:hover {
+    background: rgba(255,255,255,0.15);
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 25px rgba(255,180,230,0.25);
+}
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .final-section {
+        padding: 60px 18px;
+    }
+
+    .final-heart {
+        font-size: 60px;
+    }
+
+    .final-message {
+        font-size: 16px;
+    }
+
+}
