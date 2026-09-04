@@ -10,11 +10,20 @@ function goToMemories() {
     });
 }
 
+```javascript
 function goToNext() {
-    document.getElementById("photo-gallery").scrollIntoView({
-        behavior: "smooth"
-    });
+
+    const gallery = document.getElementById("photo-gallery");
+
+    if (gallery) {
+        gallery.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
 }
+```
+
 ```javascript
 function goToFinal() {
 
