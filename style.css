@@ -676,24 +676,15 @@ button:hover,
     width: 100%;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    padding: 80px 20px;
+    padding: 60px 20px;
 
     text-align: center;
 
     background:
-        radial-gradient(
-            circle at center,
-            #4a2854,
-            transparent 45%
-        ),
-        radial-gradient(
-            circle at top left,
-            #302044,
-            transparent 40%
-        ),
+        radial-gradient(circle at center, #4a2854, transparent 50%),
         #0d0712;
 
     color: white;
@@ -708,26 +699,37 @@ button:hover,
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
 .final-heart {
+    display: block;
+
     font-size: 75px;
 
-    margin-bottom: 25px;
+    line-height: 1;
+
+    margin-bottom: 30px;
 
     animation: heartBeat 1.5s ease-in-out infinite;
 
     filter:
-        drop-shadow(0 0 20px rgba(255, 100, 150, 0.6));
+        drop-shadow(0 0 25px rgba(255, 100, 150, 0.7));
 }
 
 .final-container .small-title {
-    color: #f3b6d2;
+    display: block;
 
     margin-bottom: 20px;
+
+    color: #f3b6d2;
 }
 
 .final-container h2 {
+    width: 100%;
+
     max-width: 750px;
 
     margin: 0 auto 30px;
@@ -735,9 +737,13 @@ button:hover,
     font-size: clamp(34px, 6vw, 58px);
 
     line-height: 1.2;
+
+    color: white;
 }
 
 .final-message {
+    width: 100%;
+
     max-width: 650px;
 
     margin: 0 auto;
@@ -746,21 +752,23 @@ button:hover,
 
     line-height: 1.9;
 
-    opacity: 0.78;
+    color: white;
+
+    opacity: 0.8;
 }
 
 .final-divider {
     margin: 35px 0;
 
-    color: #f3b6d2;
-
     font-size: 25px;
+
+    color: #f3b6d2;
 
     letter-spacing: 8px;
 }
 
 .final-line {
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 
     font-size: 18px;
 
@@ -770,12 +778,16 @@ button:hover,
 }
 
 .final-container h3 {
+    margin: 0;
+
     font-size: clamp(25px, 5vw, 38px);
 
     color: #f5c6dc;
 }
 
 .replay-button {
+    display: inline-block;
+
     margin-top: 45px;
 
     padding: 14px 32px;
@@ -798,12 +810,12 @@ button:hover,
 }
 
 .replay-button:hover {
-    background: rgba(255,255,255,0.15);
-
     transform: scale(1.06);
 
+    background: rgba(255,255,255,0.15);
+
     box-shadow:
-        0 0 25px rgba(255,180,230,0.25);
+        0 0 25px rgba(255,180,230,0.3);
 }
 
 @keyframes heartBeat {
@@ -815,20 +827,25 @@ button:hover,
     50% {
         transform: scale(1.12);
     }
-
 }
 
 
+/* ================================= */
 /* MOBILE */
+/* ================================= */
 
 @media (max-width: 600px) {
 
     .final-section {
-        padding: 60px 18px;
+        padding: 50px 15px;
     }
 
     .final-heart {
         font-size: 60px;
+    }
+
+    .final-container h2 {
+        font-size: 34px;
     }
 
     .final-message {
