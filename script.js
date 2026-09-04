@@ -5,6 +5,8 @@ function openStory() {
     });
 
 }
+
+
 function goToNext() {
 
     document.getElementById("memories").scrollIntoView({
