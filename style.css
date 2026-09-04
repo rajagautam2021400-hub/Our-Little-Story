@@ -667,3 +667,9 @@ button:hover {
     }
 
 }
+button {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    cursor: pointer;
+}
