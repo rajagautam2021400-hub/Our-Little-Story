@@ -505,3 +505,169 @@ button:hover,
     }
 
 }
+/* ================================= */
+/* FIFTH PAGE : THE LETTER */
+/* ================================= */
+
+.letter-section {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #4a2854,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            #302044,
+            transparent 45%
+        ),
+        #100914;
+
+    color: white;
+}
+
+.letter-container {
+    width: 100%;
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.letter-container .small-title {
+    display: block;
+
+    color: #f3b6d2;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.letter-card {
+    padding: 55px 55px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.10),
+            rgba(255,255,255,0.04)
+        );
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.3);
+
+    animation: letterAppear 1s ease;
+}
+
+.letter-top {
+    font-size: 30px;
+
+    color: #f3b6d2;
+
+    margin-bottom: 20px;
+}
+
+.letter-card h2 {
+    font-size: clamp(30px, 5vw, 45px);
+
+    margin-bottom: 35px;
+}
+
+.letter-card p {
+    max-width: 650px;
+
+    margin: 0 auto 22px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    opacity: 0.78;
+}
+
+.letter-divider {
+    margin: 30px 0;
+
+    font-size: 28px;
+
+    color: #f3b6d2;
+}
+
+.letter-ending {
+    font-style: italic;
+
+    color: #f5c6dc;
+}
+
+.signature {
+    margin-top: 30px;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #f3b6d2;
+}
+
+.letter-next {
+    margin-top: 45px;
+}
+
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .letter-section {
+        padding: 55px 15px;
+    }
+
+    .letter-card {
+        padding: 40px 25px;
+    }
+
+    .letter-card p {
+        font-size: 16px;
+    }
+
+}
