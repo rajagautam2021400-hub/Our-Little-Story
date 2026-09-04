@@ -1,23 +1,30 @@
-function openStory() {
-    document.getElementById("story").scrollIntoView({
-        behavior: "smooth"
-    });
+function scrollToSection(id) {
+    const section = document.getElementById(id);
+
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
 }
+
+
+function openStory() {
+    scrollToSection("story");
+}
+
 
 function goToMemories() {
-    document.getElementById("memories").scrollIntoView({
-        behavior: "smooth"
-    });
+    scrollToSection("memories");
 }
+
 
 function goToNext() {
-    document.getElementById("photo-gallery").scrollIntoView({
-        behavior: "smooth"
-    });
+    scrollToSection("photo-gallery");
 }
 
+
 function goToFinal() {
-    document.getElementById("photo-gallery").scrollIntoView({
-        behavior: "smooth"
-    });
+    scrollToSection("photo-gallery");
 }
