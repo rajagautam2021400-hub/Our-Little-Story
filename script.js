@@ -34,3 +34,20 @@ function goToLetterNext() {
 function goToFinal() {
     scrollToSection("photo-gallery");
 }
+function goToFinalScene() {
+
+    document.getElementById("final").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function replayStory() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
