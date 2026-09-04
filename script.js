@@ -23,7 +23,13 @@ function goToMemories() {
 function goToNext() {
     scrollToSection("photo-gallery");
 }
+function goToLetterNext() {
 
+    document.getElementById("letter").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
 
 function goToFinal() {
     scrollToSection("photo-gallery");
