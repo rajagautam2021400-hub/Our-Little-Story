@@ -194,3 +194,104 @@ button:hover {
 .ending {
     font-style: italic;
 }
+/* MEMORIES SECTION */
+
+.memories-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(circle at top left, #42294f, transparent 45%),
+        radial-gradient(circle at bottom right, #302044, transparent 45%),
+        #100914;
+}
+
+.memories-container {
+    width: min(1000px, 95%);
+
+    text-align: center;
+}
+
+.memories-container h2 {
+    font-size: clamp(30px, 5vw, 48px);
+
+    margin: 20px 0 45px;
+
+    line-height: 1.3;
+}
+
+.memory-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.memory-card {
+    padding: 35px 25px;
+
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.4s;
+}
+
+.memory-card:hover {
+    transform: translateY(-12px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(255, 255, 255, 0.12);
+}
+
+.memory-icon {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.memory-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.memory-card p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    opacity: 0.75;
+}
+
+.next-button {
+    margin-top: 45px;
+}
+
+@media (max-width: 750px) {
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-card {
+        min-height: 200px;
+    }
+
+}
