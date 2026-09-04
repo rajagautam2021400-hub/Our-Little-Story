@@ -11,7 +11,7 @@ function goToMemories() {
 }
 
 function goToNext() {
-    document.getElementById("memories").scrollIntoView({
+    document.getElementById("photo-gallery").scrollIntoView({
         behavior: "smooth"
     });
 }
