@@ -1,4 +1,4 @@
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -85,7 +85,17 @@ body {
 /* BUTTONS */
 /* ================================= */
 
-button {
+button,
+.open-button,
+.next-button {
+    position: relative;
+
+    z-index: 100;
+
+    pointer-events: auto;
+
+    cursor: pointer;
+
     border: none;
 
     padding: 15px 40px;
@@ -93,19 +103,25 @@ button {
     border-radius: 50px;
 
     background: white;
+
     color: #241127;
 
     font-family: Georgia, serif;
 
     font-size: 17px;
+
     font-weight: 600;
 
-    cursor: pointer;
+    text-decoration: none;
+
+    display: inline-block;
 
     transition: 0.3s;
 }
 
-button:hover {
+button:hover,
+.open-button:hover,
+.next-button:hover {
     transform: scale(1.08);
 
     box-shadow:
@@ -147,6 +163,8 @@ button:hover {
 
     backdrop-filter: blur(15px);
 
+    -webkit-backdrop-filter: blur(15px);
+
     box-shadow:
         0 0 40px rgba(255, 180, 230, 0.08);
 }
@@ -181,10 +199,6 @@ button:hover {
     font-size: 25px;
 }
 
-.message-card .next-button {
-    margin-top: 5px;
-}
-
 
 /* ================================= */
 /* THIRD PAGE : MEMORIES */
@@ -201,16 +215,8 @@ button:hover {
     padding: 60px 20px;
 
     background:
-        radial-gradient(
-            circle at top left,
-            #42294f,
-            transparent 45%
-        ),
-        radial-gradient(
-            circle at bottom right,
-            #302044,
-            transparent 45%
-        ),
+        radial-gradient(circle at top left, #42294f, transparent 45%),
+        radial-gradient(circle at bottom right, #302044, transparent 45%),
         #100914;
 }
 
@@ -254,6 +260,8 @@ button:hover {
 
     backdrop-filter: blur(12px);
 
+    -webkit-backdrop-filter: blur(12px);
+
     transition: 0.4s;
 }
 
@@ -284,219 +292,14 @@ button:hover {
     opacity: 0.75;
 }
 
-.next-button {
-    display: inline-block;
-
+.memories-container .next-button {
     margin-top: 45px;
-
-    padding: 14px 30px;
 }
 
 
 /* ================================= */
-/* ANIMATION */
+/* FOURTH PAGE : PHOTO GALLERY */
 /* ================================= */
-
-@keyframes appear {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-
-/* ================================= */
-/* MOBILE */
-/* ================================= */
-
-@media (max-width: 750px) {
-
-    .memory-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .memory-card {
-        min-height: 200px;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(40px, 12vw, 65px);
-    }
-
-    .message-card {
-        padding: 45px 25px;
-    }
-}
-```css
-/* =========================
-   SCENE 4 - PHOTO GALLERY
-========================= */
-
-.photo-section {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 70px 20px;
-
-    background:
-        radial-gradient(circle at 20% 20%, #3d234d, transparent 45%),
-        radial-gradient(circle at 80% 80%, #241936, transparent 45%),
-        #0d0712;
-
-    color: white;
-}
-
-.photo-container {
-    width: min(1050px, 95%);
-
-    text-align: center;
-}
-
-.photo-container .small-title {
-    display: inline-block;
-
-    font-size: 15px;
-
-    letter-spacing: 2px;
-
-    color: #f3b6d2;
-
-    margin-bottom: 10px;
-}
-
-.photo-container h2 {
-    font-size: clamp(30px, 5vw, 48px);
-
-    line-height: 1.3;
-
-    margin: 15px 0 45px;
-}
-
-.photo-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-    align-items: center;
-}
-
-.photo-card {
-    overflow: hidden;
-
-    border-radius: 25px;
-
-    background: rgba(255, 255, 255, 0.07);
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    backdrop-filter: blur(12px);
-
-    -webkit-backdrop-filter: blur(12px);
-
-    transition: 0.4s;
-}
-
-.photo-card:hover {
-    transform: translateY(-10px);
-
-    box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.35);
-}
-
-.photo-card.featured {
-    transform: translateY(-15px);
-
-    border-color: rgba(255, 182, 210, 0.45);
-}
-
-.photo-card.featured:hover {
-    transform: translateY(-25px);
-}
-
-.photo-placeholder {
-    height: 280px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 70px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(247, 168, 196, 0.18),
-            rgba(199, 125, 255, 0.18)
-        );
-}
-
-.photo-content {
-    padding: 22px 20px 25px;
-}
-
-.photo-content h3 {
-    margin: 0 0 10px;
-
-    font-size: 22px;
-}
-
-.photo-content p {
-    margin: 0;
-
-    line-height: 1.6;
-
-    opacity: 0.7;
-
-    font-size: 15px;
-}
-
-.photo-next {
-    margin-top: 50px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-
-    .photo-section {
-        padding: 55px 15px;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .photo-card.featured {
-        transform: none;
-    }
-
-    .photo-card.featured:hover {
-        transform: translateY(-10px);
-    }
-
-    .photo-placeholder {
-        height: 240px;
-    }
-
-}
-```
-/* ============================= */
-/* SCENE 4 : PHOTO GALLERY */
-/* ============================= */
 
 .photo-section {
     min-height: 100vh;
@@ -506,15 +309,12 @@ button:hover {
     justify-content: center;
     align-items: center;
 
-    box-sizing: border-box;
     padding: 80px 20px;
 
     background:
         radial-gradient(circle at top left, #432951, transparent 45%),
         radial-gradient(circle at bottom right, #302044, transparent 45%),
         #100914;
-
-    color: white;
 }
 
 .photo-container {
@@ -546,8 +346,6 @@ button:hover {
     font-size: clamp(30px, 5vw, 48px);
 
     line-height: 1.3;
-
-    color: white;
 }
 
 .photo-grid {
@@ -558,6 +356,8 @@ button:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 25px;
+
+    align-items: center;
 }
 
 .photo-card {
@@ -569,7 +369,8 @@ button:hover {
 
     border: 1px solid rgba(255, 255, 255, 0.18);
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
 
     backdrop-filter: blur(12px);
 
@@ -597,10 +398,13 @@ button:hover {
 
 .photo-placeholder {
     width: 100%;
+
     height: 300px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     font-size: 70px;
@@ -621,8 +425,6 @@ button:hover {
     margin: 0 0 10px;
 
     font-size: 23px;
-
-    color: white;
 }
 
 .photo-content p {
@@ -632,8 +434,6 @@ button:hover {
 
     line-height: 1.6;
 
-    color: white;
-
     opacity: 0.7;
 }
 
@@ -642,12 +442,50 @@ button:hover {
 }
 
 
+/* ================================= */
+/* ANIMATION */
+/* ================================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ================================= */
 /* MOBILE */
+/* ================================= */
 
 @media (max-width: 750px) {
 
-    .photo-section {
-        padding: 60px 15px;
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-card {
+        min-height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 12vw, 65px);
+    }
+
+    .message-card {
+        padding: 45px 25px;
     }
 
     .photo-grid {
@@ -666,10 +504,4 @@ button:hover {
         height: 250px;
     }
 
-}
-button {
-    position: relative;
-    z-index: 100;
-    pointer-events: auto;
-    cursor: pointer;
 }
