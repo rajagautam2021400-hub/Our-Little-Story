@@ -4,75 +4,86 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+
     font-family: Georgia, serif;
 
-    background:
-        radial-gradient(circle at top, #4a315d, transparent 45%),
-        linear-gradient(135deg, #120b1c, #241127, #0d0815);
-
+    background: #120b1c;
     color: white;
 }
 
-.welcome {
+
+/* ================================= */
+/* FIRST PAGE : OPENING */
+/* ================================= */
+
+.hero-section {
     min-height: 100vh;
+    width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
-}
-
-.card {
-    width: min(90%, 520px);
-    padding: 65px 35px;
-
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 20px;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background:
+        radial-gradient(circle at top, #4a315d, transparent 45%),
+        linear-gradient(135deg, #120b1c, #241127, #0d0815);
+}
 
-    border-radius: 30px;
-
-    backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 0 40px rgba(255, 180, 230, 0.15);
+.hero-content {
+    width: min(900px, 90%);
+    margin: 0 auto;
 
     animation: appear 1.5s ease;
 }
 
-.sparkle {
-    font-size: 35px;
-    margin-bottom: 20px;
+.hero-content .small-title {
+    display: block;
 
-    animation: sparkle 2s infinite;
+    font-size: 17px;
+    letter-spacing: 3px;
+
+    opacity: 0.7;
+
+    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: clamp(35px, 7vw, 55px);
-    margin-bottom: 20px;
+.hero-content h1 {
+    font-size: clamp(45px, 8vw, 90px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
 
     letter-spacing: 1px;
 }
 
-.subtitle {
-    font-size: 20px;
+.hero-content p {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    font-size: 19px;
     line-height: 1.8;
 
     opacity: 0.8;
 }
 
-.heart {
-    font-size: 75px;
-    margin: 25px 0;
 
-    animation: heartbeat 2s infinite;
-}
+/* ================================= */
+/* BUTTONS */
+/* ================================= */
 
 button {
     border: none;
@@ -84,7 +95,10 @@ button {
     background: white;
     color: #241127;
 
-    font-size: 18px;
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+    font-weight: 600;
 
     cursor: pointer;
 
@@ -98,50 +112,20 @@ button:hover {
         0 0 25px rgba(255, 255, 255, 0.5);
 }
 
-@keyframes appear {
 
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
+/* ================================= */
+/* SECOND PAGE : MESSAGE */
+/* ================================= */
 
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes heartbeat {
-
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
-}
-
-@keyframes sparkle {
-
-    0%, 100% {
-        opacity: 0.5;
-        transform: rotate(0deg);
-    }
-
-    50% {
-        opacity: 1;
-        transform: rotate(180deg);
-    }
-}
 .message-section {
     min-height: 100vh;
+    width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 40px 20px;
+    padding: 60px 20px;
 
     background:
         radial-gradient(circle at bottom, #3b244b, transparent 50%),
@@ -149,7 +133,7 @@ button:hover {
 }
 
 .message-card {
-    max-width: 700px;
+    width: min(700px, 95%);
 
     text-align: center;
 
@@ -162,11 +146,16 @@ button:hover {
     border-radius: 30px;
 
     backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 40px rgba(255, 180, 230, 0.08);
 }
 
 .small-title {
     font-size: 17px;
+
     letter-spacing: 3px;
+
     opacity: 0.7;
 }
 
@@ -180,6 +169,7 @@ button:hover {
 
 .message-card p {
     font-size: 19px;
+
     line-height: 1.8;
 
     opacity: 0.8;
@@ -191,13 +181,18 @@ button:hover {
     font-size: 25px;
 }
 
-.ending {
-    font-style: italic;
+.message-card .next-button {
+    margin-top: 5px;
 }
-/* MEMORIES SECTION */
+
+
+/* ================================= */
+/* THIRD PAGE : MEMORIES */
+/* ================================= */
 
 .memories-section {
     min-height: 100vh;
+    width: 100%;
 
     display: flex;
     justify-content: center;
@@ -206,8 +201,16 @@ button:hover {
     padding: 60px 20px;
 
     background:
-        radial-gradient(circle at top left, #42294f, transparent 45%),
-        radial-gradient(circle at bottom right, #302044, transparent 45%),
+        radial-gradient(
+            circle at top left,
+            #42294f,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #302044,
+            transparent 45%
+        ),
         #100914;
 }
 
@@ -241,6 +244,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     background: rgba(255, 255, 255, 0.07);
 
@@ -281,8 +285,35 @@ button:hover {
 }
 
 .next-button {
+    display: inline-block;
+
     margin-top: 45px;
+
+    padding: 14px 30px;
 }
+
+
+/* ================================= */
+/* ANIMATION */
+/* ================================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
 
 @media (max-width: 750px) {
 
@@ -294,75 +325,11 @@ button:hover {
         min-height: 200px;
     }
 
-}
-/* NEXT BUTTON FIX */
+    .hero-content h1 {
+        font-size: clamp(40px, 12vw, 65px);
+    }
 
-.next-button {
-    display: inline-block;
-    visibility: visible;
-    opacity: 1;
-
-    margin-top: 40px;
-    padding: 14px 30px;
-
-    background: #ffffff;
-    color: #24152f;
-
-    border: none;
-    border-radius: 30px;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.next-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-}
-/* ============================= */
-/* OPENING PAGE FIX */
-/* ============================= */
-
-.hero-section {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 40px 20px;
-
-    box-sizing: border-box;
-}
-
-.hero-content {
-    width: min(900px, 90%);
-    margin: 0 auto;
-}
-
-.hero-content .small-title {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.hero-content h1 {
-    font-size: clamp(45px, 8vw, 90px);
-    line-height: 1.1;
-    margin: 0 0 25px;
-}
-
-.hero-content p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    line-height: 1.7;
-}
-
-.hero-content .open-button {
-    display: inline-block;
+    .message-card {
+        padding: 45px 25px;
+    }
 }
