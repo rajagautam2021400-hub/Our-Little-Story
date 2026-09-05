@@ -813,32 +813,36 @@ button:hover,
     transform: scale(1.06);
 
     background: rgba(255,255,255,0.15);
-.photo-card img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.5s ease;
+
+    box-shadow:
+        0 0 25px rgba(255,180,230,0.3);
 }
 
-.photo-card:hover img {
-    transform: scale(1.05);
-}
+
+/* ================================= */
+/* PHOTO GALLERY IMAGES */
+/* ================================= */
 
 .photo-card {
     overflow: hidden;
 }
 
-@media (max-width: 700px) {
-    .photo-card img {
-        height: 280px;
-    }
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.5s ease;
 }
-    box-shadow:
-        0 0 25px rgba(255,180,230,0.3);
+
+.photo-card:hover img {
+    transform: scale(1.03);
 }
+
+
+/* ================================= */
+/* FINAL HEART ANIMATION */
+/* ================================= */
 
 @keyframes heartBeat {
 
@@ -853,7 +857,7 @@ button:hover,
 
 
 /* ================================= */
-/* MOBILE */
+/* FINAL MOBILE */
 /* ================================= */
 
 @media (max-width: 600px) {
@@ -872,6 +876,24 @@ button:hover,
 
     .final-message {
         font-size: 16px;
+    }
+
+}
+
+
+/* ================================= */
+/* PHOTO MOBILE */
+/* ================================= */
+
+@media (max-width: 750px) {
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        width: 100%;
+        height: auto;
     }
 
 }
