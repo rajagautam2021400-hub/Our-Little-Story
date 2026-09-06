@@ -2,23 +2,42 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#100914">
 
     <title>For Someone Special ✨</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- ============================= -->
-    <!-- FIRST PAGE : OPENING -->
-    <!-- ============================= -->
+    <!-- ================================= -->
+    <!-- BACKGROUND EFFECTS -->
+    <!-- ================================= -->
 
-    <section class="hero-section" id="home">
+    <div class="background-glow"></div>
 
-        <div class="hero-content">
+    <div class="particles" id="particles"></div>
+
+
+    <!-- ================================= -->
+    <!-- SCENE 1 : OPENING -->
+    <!-- ================================= -->
+
+    <section class="hero-section"
+             id="home">
+
+        <div class="hero-content reveal">
 
             <span class="small-title">
                 A little something ✨
@@ -33,43 +52,65 @@
                 through a little story.
             </p>
 
-            <button class="open-button" onclick="openStory()">
+            <div class="hero-heart">
+                ♡
+            </div>
+
+            <button class="open-button"
+                    onclick="openStory()">
+
                 Open ✨
+
             </button>
+
+            <div class="scroll-hint">
+                <span>Scroll to begin</span>
+                <div>↓</div>
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- ============================= -->
-    <!-- SECOND PAGE : MESSAGE -->
-    <!-- ============================= -->
 
-    <section class="message-section" id="story">
+    <!-- ================================= -->
+    <!-- SCENE 2 : MESSAGE -->
+    <!-- ================================= -->
 
-        <div class="message-card">
+    <section class="message-section"
+             id="story">
+
+        <div class="message-card reveal">
 
             <span class="small-title">
                 A little message 💌
             </span>
 
             <h2>
-                Some people make ordinary moments special.
+                Some people make
+                ordinary moments special.
             </h2>
 
             <p>
-                This little corner of the internet is made
-                just to keep a few beautiful thoughts and
-                memories in one place.
+                This little corner of the internet
+                is made just to keep a few beautiful
+                thoughts and memories in one place.
             </p>
 
             <div class="divider">
                 ✦
             </div>
 
-            <button class="next-button" onclick="goToMemories()">
+            <p class="soft-text">
+                And this is only the beginning...
+            </p>
+
+            <button class="next-button"
+                    onclick="goToMemories()">
+
                 Next ✨
+
             </button>
 
         </div>
@@ -77,25 +118,30 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- THIRD PAGE : MEMORIES -->
-    <!-- ============================= -->
 
-    <section class="memories-section" id="memories">
+    <!-- ================================= -->
+    <!-- SCENE 3 : MEMORIES -->
+    <!-- ================================= -->
 
-        <div class="memories-container">
+    <section class="memories-section"
+             id="memories">
+
+        <div class="memories-container reveal">
 
             <span class="small-title">
                 Little Memories 🌸
             </span>
 
             <h2>
-                Some moments are worth remembering.
+                Some moments are
+                worth remembering.
             </h2>
+
 
             <div class="memory-grid">
 
-                <div class="memory-card">
+
+                <div class="memory-card reveal">
 
                     <div class="memory-icon">
                         🌸
@@ -106,13 +152,15 @@
                     </h3>
 
                     <p>
-                        Every beautiful story has a beginning.
+                        Every beautiful story
+                        has a beginning.
                     </p>
 
                 </div>
 
 
-                <div class="memory-card">
+
+                <div class="memory-card reveal">
 
                     <div class="memory-icon">
                         🌙
@@ -123,14 +171,16 @@
                     </h3>
 
                     <p>
-                        Sometimes the simplest conversations
-                        become the most memorable ones.
+                        Sometimes the simplest
+                        conversations become the
+                        most memorable ones.
                     </p>
 
                 </div>
 
 
-                <div class="memory-card">
+
+                <div class="memory-card reveal">
 
                     <div class="memory-icon">
                         ✨
@@ -147,11 +197,15 @@
 
                 </div>
 
+
             </div>
 
 
-            <button class="next-button" onclick="goToNext()">
+            <button class="next-button"
+                    onclick="goToNext()">
+
                 Next ✨
+
             </button>
 
         </div>
@@ -159,198 +213,379 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- FOURTH PAGE : PHOTO GALLERY -->
-    <!-- ============================= -->
 
-    <section class="photo-section" id="photo-gallery">
+    <!-- ================================= -->
+    <!-- SCENE 4 : PHOTO GALLERY -->
+    <!-- ================================= -->
 
-        <div class="photo-container">
+    <section class="photo-section"
+             id="photo-gallery">
+
+        <div class="photo-container reveal">
 
             <span class="small-title">
                 Our Little Gallery 📸
             </span>
 
             <h2>
-                A few moments, captured forever.
+                A few moments,
+                captured forever.
             </h2>
+
+
+            <div class="gallery-intro">
+                Tap any photo to see it a little closer. ✨
+            </div>
+
 
             <div class="photo-grid">
 
-    <!-- PHOTO 1 -->
-    <div class="photo-card">
-        <img src="1.jpeg" alt="Memory 1" onclick="openPhoto(this)">
-        <div class="photo-content">
-            <h3>Beautiful Moment</h3>
-            <p>A moment worth keeping forever. ✨</p>
-        </div>
-    </div>
 
-    <!-- PHOTO 2 -->
-    <div class="photo-card featured">
-        <img src="2.jpeg" alt="Memory 2" onclick="openPhoto(this)">
-        <div class="photo-content">
-            <h3>Favorite Memory</h3>
-            <p>Some moments just feel a little more special. ❤️</p>
-        </div>
-    </div>
+                <!-- PHOTO 1 -->
 
-    <!-- PHOTO 3 -->
-    <div class="photo-card">
-        <img src="3.jpeg" alt="Memory 3" onclick="openPhoto(this)">
-        <div class="photo-content">
-            <h3>Sweet Moment</h3>
-            <p>The little moments become the biggest memories. 🌸</p>
-        </div>
-    </div>
+                <div class="photo-card reveal">
 
-    <!-- PHOTO 4 -->
-    <div class="photo-card">
-        <img src="4.jpeg" alt="Memory 4" onclick="openPhoto(this)">
-        <div class="photo-content">
-            <h3>A Special Memory</h3>
-            <p>Some memories deserve their own little place. 🌙</p>
-        </div>
-    </div>
+                    <div class="photo-number">
+                        01
+                    </div>
 
-    <!-- PHOTO 5 -->
-    <div class="photo-card">
-        <img src="5.jpeg" alt="Memory 5" onclick="openPhoto(this)">
-        <div class="photo-content">
-            <h3>One More Moment</h3>
-            <p>And this one is worth remembering too. ✨</p>
-        </div>
-    </div>
+                    <img src="1.jpeg"
+                         alt="Memory 1"
+                         onclick="openPhoto(this)">
 
-</div>
-            <div class="photo-lightbox" id="photoLightbox" onclick="closePhoto()">
+                    <div class="photo-content">
 
-    <button class="close-photo" onclick="event.stopPropagation(); closePhoto()">
-        ✕
-    </button>
+                        <h3>
+                            Beautiful Moment
+                        </h3>
 
-    <img id="largePhoto" src="" alt="Large Memory">
+                        <p>
+                            A moment worth keeping forever. ✨
+                        </p>
 
-</div>
+                    </div>
+
+                </div>
 
 
-            <button class="next-button photo-next" onclick="goToLetterNext()">
+
+                <!-- PHOTO 2 -->
+
+                <div class="photo-card featured reveal">
+
+                    <div class="photo-number">
+                        02
+                    </div>
+
+                    <img src="2.jpeg"
+                         alt="Memory 2"
+                         onclick="openPhoto(this)">
+
+                    <div class="photo-content">
+
+                        <h3>
+                            Favorite Memory
+                        </h3>
+
+                        <p>
+                            Some moments just feel
+                            a little more special. ❤️
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 3 -->
+
+                <div class="photo-card reveal">
+
+                    <div class="photo-number">
+                        03
+                    </div>
+
+                    <img src="3.jpeg"
+                         alt="Memory 3"
+                         onclick="openPhoto(this)">
+
+                    <div class="photo-content">
+
+                        <h3>
+                            Sweet Moment
+                        </h3>
+
+                        <p>
+                            The little moments become
+                            the biggest memories. 🌸
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 4 -->
+
+                <div class="photo-card reveal">
+
+                    <div class="photo-number">
+                        04
+                    </div>
+
+                    <img src="4.jpeg"
+                         alt="Memory 4"
+                         onclick="openPhoto(this)">
+
+                    <div class="photo-content">
+
+                        <h3>
+                            A Special Memory
+                        </h3>
+
+                        <p>
+                            Some memories deserve
+                            their own little place. 🌙
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 5 -->
+
+                <div class="photo-card reveal">
+
+                    <div class="photo-number">
+                        05
+                    </div>
+
+                    <img src="5.jpeg"
+                         alt="Memory 5"
+                         onclick="openPhoto(this)">
+
+                    <div class="photo-content">
+
+                        <h3>
+                            One More Moment
+                        </h3>
+
+                        <p>
+                            And this one is worth
+                            remembering too. ✨
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <button class="next-button photo-next"
+                    onclick="goToLetterNext()">
+
                 Next ✨
+
             </button>
 
         </div>
 
     </section>
-<!-- ============================= -->
-<!-- FIFTH PAGE : THE LETTER -->
-<!-- ============================= -->
 
-<section class="letter-section" id="letter">
 
-    <div class="letter-container">
 
-        <span class="small-title">
-            A Few Words For You 💌
-        </span>
+    <!-- ================================= -->
+    <!-- SCENE 5 : LETTER -->
+    <!-- ================================= -->
 
-        <div class="letter-card">
+    <section class="letter-section"
+             id="letter">
 
-            <div class="letter-top">
-                ✦
+        <div class="letter-container reveal">
+
+            <span class="small-title">
+                A Few Words For You 💌
+            </span>
+
+
+            <div class="letter-card">
+
+                <div class="letter-top">
+                    ✦
+                </div>
+
+                <h2>
+                    Dear Someone Special,
+                </h2>
+
+
+                <p>
+                    I don't know if words can ever truly
+                    explain how special some moments become.
+                </p>
+
+
+                <p>
+                    But sometimes, it's the little things —
+                    a conversation, a smile, a random moment —
+                    that quietly stay with us.
+                </p>
+
+
+                <p>
+                    And if this little story makes you smile,
+                    then it has already served its purpose.
+                </p>
+
+
+                <div class="letter-divider">
+                    ♡
+                </div>
+
+
+                <p class="letter-ending">
+                    Here's to all the beautiful moments
+                    that are still waiting to happen.
+                </p>
+
+
+                <div class="signature">
+                    With a little love ✨
+                </div>
+
             </div>
+
+
+            <button class="next-button letter-next"
+                    onclick="goToFinalScene()">
+
+                Next ✨
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCENE 6 : FINAL SURPRISE -->
+    <!-- ================================= -->
+
+    <section class="final-section"
+             id="final">
+
+        <div class="final-container reveal">
+
+
+            <div class="final-stars">
+                ✦　✧　✦
+            </div>
+
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+
+            <span class="small-title">
+                One Last Thing ✨
+            </span>
+
 
             <h2>
-                Dear Someone Special,
+                Some people are simply
+                impossible to forget.
             </h2>
 
-            <p>
-                I don't know if words can ever truly explain
-                how special some moments become.
+
+            <p class="final-message">
+                Maybe this little website is just
+                a collection of words, moments and
+                memories...
             </p>
 
-            <p>
-                But sometimes, it's the little things —
-                a conversation, a smile, a random moment —
-                that quietly stay with us.
-            </p>
 
-            <p>
-                And if this little story makes you smile,
-                then it has already served its purpose.
-            </p>
-
-            <div class="letter-divider">
-                ♡
+            <div class="final-divider">
+                ✦ ♡ ✦
             </div>
 
-            <p class="letter-ending">
-                Here's to all the beautiful moments
-                that are still waiting to happen.
+
+            <p class="final-line">
+                And honestly...
             </p>
 
-            <div class="signature">
-                With a little love ✨
+
+            <h3>
+                I'm really glad you exist. ❤️
+            </h3>
+
+
+            <p class="final-subtext">
+                Thank you for being a beautiful
+                part of this little story.
+            </p>
+
+
+            <button class="replay-button"
+                    onclick="replayStory()">
+
+                Replay ↺
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- PHOTO LIGHTBOX -->
+    <!-- ================================= -->
+
+    <div class="photo-lightbox"
+         id="photoLightbox"
+         onclick="closePhoto()">
+
+
+        <button class="close-photo"
+                onclick="event.stopPropagation(); closePhoto()">
+
+            ✕
+
+        </button>
+
+
+        <div class="lightbox-content"
+             onclick="event.stopPropagation()">
+
+            <img id="largePhoto"
+                 src=""
+                 alt="Large Memory">
+
+            <div class="lightbox-caption">
+                A little memory ✨
             </div>
 
         </div>
 
-        <button class="next-button letter-next"
-                onclick="goToFinalScene()">
-            Next ✨
-        </button>
 
     </div>
 
-</section>
-<!-- ============================= -->
-<!-- SIXTH PAGE : FINAL SURPRISE -->
-<!-- ============================= -->
 
-<section class="final-section" id="final">
 
-    <div class="final-container">
-
-        <div class="final-heart">
-            ❤️
-        </div>
-
-        <span class="small-title">
-            One Last Thing ✨
-        </span>
-
-        <h2>
-            Some people are simply
-            impossible to forget.
-        </h2>
-
-        <p class="final-message">
-            Maybe this little website is just a collection
-            of words, moments and memories...
-            but every little part of it was made with care.
-        </p>
-
-        <div class="final-divider">
-            ✦ ♡ ✦
-        </div>
-
-        <p class="final-line">
-            And honestly...
-        </p>
-
-        <h3>
-            I'm really glad you exist. ❤️
-        </h3>
-
-        <button class="replay-button" onclick="replayStory()">
-            Replay ↺
-        </button>
-
-    </div>
-
-</section>
-    <!-- ============================= -->
+    <!-- ================================= -->
     <!-- JAVASCRIPT -->
-    <!-- ============================= -->
+    <!-- ================================= -->
 
     <script src="script.js"></script>
 
