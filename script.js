@@ -51,3 +51,14 @@ function replayStory() {
     });
 
 }
+function openPhoto(image) {
+    const lightbox = document.getElementById("photoLightbox");
+    const largePhoto = document.getElementById("largePhoto");
+
+    largePhoto.src = image.src;
+    lightbox.classList.add("active");
+}
+
+function closePhoto() {
+    document.getElementById("photoLightbox").classList.remove("active");
+}
