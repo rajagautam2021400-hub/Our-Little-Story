@@ -52,13 +52,19 @@ function replayStory() {
 
 }
 function openPhoto(image) {
+
     const lightbox = document.getElementById("photoLightbox");
     const largePhoto = document.getElementById("largePhoto");
 
-    largePhoto.src = image.src;
+    largePhoto.src = image.getAttribute("src");
+
     lightbox.classList.add("active");
 }
 
+
 function closePhoto() {
-    document.getElementById("photoLightbox").classList.remove("active");
+
+    const lightbox = document.getElementById("photoLightbox");
+
+    lightbox.classList.remove("active");
 }
