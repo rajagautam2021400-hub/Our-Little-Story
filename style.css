@@ -897,3 +897,56 @@ button:hover,
     }
 
 }
+/* ================================= */
+/* CINEMATIC PHOTO GALLERY */
+/* ================================= */
+
+.photo-grid {
+    perspective: 1000px;
+}
+
+.photo-card {
+    position: relative;
+    transform: translateY(0) scale(1);
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.photo-card:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+.photo-card:nth-child(2) {
+    transform: translateY(-20px) scale(1.04);
+}
+
+.photo-card:nth-child(3) {
+    transform: rotate(2deg);
+}
+
+.photo-card:nth-child(4) {
+    transform: rotate(-1deg);
+}
+
+.photo-card:nth-child(5) {
+    transform: rotate(1.5deg);
+}
+
+.photo-card:hover {
+    transform: translateY(-15px) scale(1.04) rotate(0deg);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    z-index: 5;
+}
+
+.photo-card img {
+    transition: transform 0.6s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.06);
+}
+
+.photo-content {
+    background: rgba(20, 10, 28, 0.35);
+}
